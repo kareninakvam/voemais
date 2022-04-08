@@ -1,0 +1,15 @@
+.container{
+    display: flexbox;
+    padding: 20px;
+}
+
+.label-search h2{
+    font-weight: 70;
+    font-size:larger;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container h1{
+    font-size:large;
+    font-family:Arial, Helvetica, sans-serif;
+}
