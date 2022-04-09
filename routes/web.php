@@ -14,8 +14,10 @@ use App\Http\Controllers\CadastroController;
 
 Route::get('/', [CadastroController::class, 'index']);
 
-Route::get('/cadastrar-cliente', [CadastroController::class, 'adicionarClientes'] );
+Route::get('/clientes/cadastrar', [CadastroController::class, 'adicionarClientes'] );
 
 Route::get('/cadastrar-viagem', [CadastroController::class, 'adicionarViagens'] );
 
-Route::get('/cliente/{id}', [CadastroController::class, 'cliente']);
+Route::get('/clientes/{id}', [CadastroController::class, 'show']);
+
+Route:: post ('/clientes', [CadastroController::class, 'store']);

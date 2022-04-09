@@ -11,6 +11,7 @@
     <!--CSS-->
     
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
@@ -21,7 +22,7 @@
     <!--Barra de navegação -->
     <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">VOE +</a>
+        <a class="navbar-brand" href="/">VOE+</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,7 +33,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/cadastrar-cliente">Adicionar Clientes</a>
+              <a class="nav-link" href="/clientes/cadastrar">Adicionar Clientes</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#">Sair</a>
@@ -43,9 +44,6 @@
     </header>
 
     @yield('content')
-
-<footer>
-    <p> Voe + &copy; </p>
-</footer>  
+ 
 </body>
 </html>
