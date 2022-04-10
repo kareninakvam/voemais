@@ -3,10 +3,13 @@
 @section ('title', 'VOE +')
 
 @section ('content')
+
 <!--Busca de clientes  -->
     <section>
-        <div class="container"><br><br>
-            <form>
+        <div class="container">
+          <a class="btn btn-light" href = "/clientes/cadastrar">Cadastrar Cliente</a>
+          <a class="btn btn-light" href = "/viagens/cadastrar">Cadastrar Viagem</a><br><br>
+              <form action="/" method="GET">
                 <div class="form-group">
                   <label for="search" class="label-search"><h2>Encontre um contato:</h2> </label>
                   <input type="text" name ="search" class="form-control"  placeholder="Faça sua busca e pressione enter">
@@ -23,7 +26,7 @@
                 <th scope="col">Nome</th>
                 <th scope="col">Telefone</th>
                 <th scope="col">Email</th>
-                <th scope="col">Ações</th>
+                <th scope="col">#</th>
               </tr>
             </thead>
             <tbody>
@@ -39,6 +42,11 @@
               @endforeach
             </tbody>
           </table>
+          @if(count($clientes)== 0 && $search)
+            <br><p>Não foi possível encontrar nenhum cliente com o nome {{$search}}. <a href="/"><strong>Clique aqui para ver todos.</strong><a></p>
+          @elseif(count($clientes)== 0)
+            <br><p>Não há clientes cadastrados. <a href="/clientes/cadastrar"><strong>Clique aqui para adicionar clientes.</strong><a><p>
+          @endif
         </div>
           
           @endsection

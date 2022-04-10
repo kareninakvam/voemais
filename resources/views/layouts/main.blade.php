@@ -36,8 +36,15 @@
               <a class="nav-link" href="/clientes/cadastrar">Adicionar Clientes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Sair</a>
-              </li>
+              <form action="/logout" method="POST">
+                @csrf
+                <a class="nav-link"
+                    onclick="event.preventDefault();
+                    this.closest('form').submit();" 
+                     href="/logout">Sair
+                </a>
+              </form>
+            </li>
           </ul>
         </div>
       </nav>
